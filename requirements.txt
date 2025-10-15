@@ -1,0 +1,12 @@
+JPype1>=1.4.1
+pandas>=1.5.0
+numpy>=1.24.0
+scipy>=1.10.0
+gensim>=4.3.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+camel-tools>=1.5.0
+arabic-reshaper>=3.0.0
+python-bidi>=0.4.2
+scikit-learn>=1.2.0
+nltk>=3.8.0
