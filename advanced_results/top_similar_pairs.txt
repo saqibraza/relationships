@@ -1,0 +1,45 @@
+
+============================================================
+Top 10 Similar Pairs - 2GRAM
+============================================================
+
+1. Surah 95 ↔ Surah 103: 0.0952
+2. Surah 113 ↔ Surah 114: 0.0857
+3. Surah 57 ↔ Surah 64: 0.0752
+4. Surah 6 ↔ Surah 10: 0.0731
+5. Surah 2 ↔ Surah 3: 0.0714
+6. Surah 58 ↔ Surah 64: 0.0708
+7. Surah 3 ↔ Surah 5: 0.0645
+8. Surah 59 ↔ Surah 64: 0.0639
+9. Surah 13 ↔ Surah 39: 0.0631
+10. Surah 22 ↔ Surah 31: 0.0631
+
+============================================================
+Top 10 Similar Pairs - 3GRAM
+============================================================
+
+1. Surah 95 ↔ Surah 103: 0.0732
+2. Surah 61 ↔ Surah 62: 0.0386
+3. Surah 22 ↔ Surah 31: 0.0369
+4. Surah 57 ↔ Surah 64: 0.0365
+5. Surah 58 ↔ Surah 64: 0.0348
+6. Surah 2 ↔ Surah 3: 0.0336
+7. Surah 15 ↔ Surah 38: 0.0331
+8. Surah 59 ↔ Surah 64: 0.0319
+9. Surah 6 ↔ Surah 10: 0.0302
+10. Surah 29 ↔ Surah 31: 0.0300
+
+============================================================
+Top 10 Similar Pairs - MULTILINGUAL_EMBEDDING
+============================================================
+
+1. Surah 16 ↔ Surah 68: 0.9782
+2. Surah 11 ↔ Surah 68: 0.9777
+3. Surah 33 ↔ Surah 61: 0.9775
+4. Surah 57 ↔ Surah 64: 0.9759
+5. Surah 16 ↔ Surah 33: 0.9755
+6. Surah 33 ↔ Surah 58: 0.9754
+7. Surah 33 ↔ Surah 66: 0.9749
+8. Surah 16 ↔ Surah 61: 0.9748
+9. Surah 33 ↔ Surah 68: 0.9741
+10. Surah 61 ↔ Surah 68: 0.9732

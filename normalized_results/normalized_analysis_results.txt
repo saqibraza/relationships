@@ -1,0 +1,49 @@
+Normalized Quran Semantic Analysis Results (0-100%)
+============================================================
+
+Top 10 Most Similar Pairs:
+------------------------------------------------------------
+1. Surah 2 ↔ Surah 5: 40.26%
+2. Surah 2 ↔ Surah 3: 40.16%
+3. Surah 3 ↔ Surah 62: 40.12%
+4. Surah 2 ↔ Surah 62: 39.60%
+5. Surah 2 ↔ Surah 58: 37.87%
+6. Surah 2 ↔ Surah 8: 37.55%
+7. Surah 7 ↔ Surah 10: 37.42%
+8. Surah 2 ↔ Surah 45: 36.94%
+9. Surah 5 ↔ Surah 61: 36.93%
+10. Surah 3 ↔ Surah 5: 36.66%
+
+Top 10 Most Different Pairs:
+------------------------------------------------------------
+1. Surah 16 ↔ Surah 108: 5.93%
+2. Surah 10 ↔ Surah 108: 5.95%
+3. Surah 17 ↔ Surah 108: 6.03%
+4. Surah 28 ↔ Surah 108: 6.09%
+5. Surah 24 ↔ Surah 108: 6.13%
+6. Surah 8 ↔ Surah 108: 6.15%
+7. Surah 22 ↔ Surah 108: 6.17%
+8. Surah 40 ↔ Surah 108: 6.18%
+9. Surah 21 ↔ Surah 108: 6.21%
+10. Surah 27 ↔ Surah 108: 6.22%
+
+Top 10 Most Asymmetric Relationships:
+------------------------------------------------------------
+1. Surah 62 → Surah 2: similarity=19.38%, asymmetry=-20.22%
+2. Surah 2 → Surah 62: similarity=39.60%, asymmetry=20.22%
+3. Surah 62 → Surah 3: similarity=19.96%, asymmetry=-20.16%
+4. Surah 3 → Surah 62: similarity=40.12%, asymmetry=20.16%
+5. Surah 109 → Surah 10: similarity=14.47%, asymmetry=-18.91%
+6. Surah 10 → Surah 109: similarity=33.37%, asymmetry=18.91%
+7. Surah 61 → Surah 5: similarity=18.90%, asymmetry=-18.03%
+8. Surah 5 → Surah 61: similarity=36.93%, asymmetry=18.03%
+9. Surah 98 → Surah 4: similarity=17.66%, asymmetry=-17.92%
+10. Surah 4 → Surah 98: similarity=35.58%, asymmetry=17.92%
+
+Statistics:
+------------------------------------------------------------
+Mean Similarity: 14.93%
+Std Deviation: 5.22%
+Min Similarity: 5.93%
+Max Similarity: 40.26%
+Median Similarity: 13.81%
