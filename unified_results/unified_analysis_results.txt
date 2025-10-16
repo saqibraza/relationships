@@ -3,59 +3,60 @@ UNIFIED MULTI-METHOD QURAN SEMANTIC ANALYSIS
 
 Methods Combined:
 ----------------------------------------------------------------------
-  • Kl Divergence: 70.0%
+  • Kl Divergence: 0.0%
   • Bigram: 0.0%
   • Trigram: 0.0%
-  • Embeddings: 0.0%
-  • Arabert: 30.0%
+  • Embeddings: 45.0%
+  • Arabert: 25.0%
+  • Asymmetric Sts: 30.0%
 
 
 Statistics:
 ----------------------------------------------------------------------
-Mean Similarity: 35.13%
-Std Deviation: 7.70%
-Min Similarity: 5.51%
-Max Similarity: 57.23%
-Median Similarity: 35.68%
+Mean Similarity: 83.61%
+Std Deviation: 9.12%
+Min Similarity: 47.26%
+Max Similarity: 97.01%
+Median Similarity: 86.09%
 
 
 Top 10 Most Similar Pairs:
 ----------------------------------------------------------------------
-1. Surah 2 ↔ Surah 5: 57.23%
-2. Surah 2 ↔ Surah 3: 57.06%
-3. Surah 3 ↔ Surah 62: 55.73%
-4. Surah 2 ↔ Surah 8: 55.19%
-5. Surah 2 ↔ Surah 58: 55.18%
-6. Surah 7 ↔ Surah 10: 55.14%
-7. Surah 2 ↔ Surah 62: 54.81%
-8. Surah 2 ↔ Surah 45: 54.81%
-9. Surah 3 ↔ Surah 5: 54.80%
-10. Surah 2 ↔ Surah 16: 54.76%
+1. Surah 58 ↔ Surah 33: 97.22%
+2. Surah 13 ↔ Surah 16: 97.01%
+3. Surah 33 ↔ Surah 16: 97.01%
+4. Surah 42 ↔ Surah 35: 96.83%
+5. Surah 16 ↔ Surah 11: 96.83%
+6. Surah 11 ↔ Surah 16: 96.82%
+7. Surah 13 ↔ Surah 3: 96.82%
+8. Surah 16 ↔ Surah 33: 96.78%
+9. Surah 33 ↔ Surah 11: 96.77%
+10. Surah 42 ↔ Surah 16: 96.75%
 
 
 Top 10 Most Different Pairs:
 ----------------------------------------------------------------------
-1. Surah 92 ↔ Surah 112: 5.51%
-2. Surah 92 ↔ Surah 105: 5.53%
-3. Surah 92 ↔ Surah 94: 5.63%
-4. Surah 92 ↔ Surah 109: 5.83%
-5. Surah 92 ↔ Surah 1: 6.23%
-6. Surah 92 ↔ Surah 95: 6.25%
-7. Surah 89 ↔ Surah 113: 6.25%
-8. Surah 92 ↔ Surah 102: 6.50%
-9. Surah 92 ↔ Surah 106: 6.69%
-10. Surah 92 ↔ Surah 97: 6.71%
+1. Surah 92 ↔ Surah 114: 47.26%
+2. Surah 92 ↔ Surah 105: 49.14%
+3. Surah 114 ↔ Surah 92: 49.47%
+4. Surah 105 ↔ Surah 92: 49.87%
+5. Surah 92 ↔ Surah 108: 51.05%
+6. Surah 92 ↔ Surah 99: 52.68%
+7. Surah 89 ↔ Surah 114: 52.75%
+8. Surah 92 ↔ Surah 102: 52.95%
+9. Surah 102 ↔ Surah 92: 53.77%
+10. Surah 92 ↔ Surah 109: 53.83%
 
 
 Top 10 Most Asymmetric Relationships:
 ----------------------------------------------------------------------
-1. Surah 62 → Surah 2: similarity=40.66%, asymmetry=-14.15%
-2. Surah 2 → Surah 62: similarity=54.81%, asymmetry=14.15%
-3. Surah 62 → Surah 3: similarity=41.62%, asymmetry=-14.11%
-4. Surah 3 → Surah 62: similarity=55.73%, asymmetry=14.11%
-5. Surah 109 → Surah 10: similarity=31.51%, asymmetry=-13.24%
-6. Surah 10 → Surah 109: similarity=44.74%, asymmetry=13.24%
-7. Surah 61 → Surah 5: similarity=40.95%, asymmetry=-12.62%
-8. Surah 5 → Surah 61: similarity=53.57%, asymmetry=12.62%
-9. Surah 98 → Surah 4: similarity=37.74%, asymmetry=-12.54%
-10. Surah 4 → Surah 98: similarity=50.29%, asymmetry=12.54%
+1. Surah 84 → Surah 108: similarity=70.27%, asymmetry=-5.56%
+2. Surah 108 → Surah 84: similarity=75.83%, asymmetry=5.56%
+3. Surah 74 → Surah 62: similarity=85.27%, asymmetry=-5.42%
+4. Surah 62 → Surah 74: similarity=90.69%, asymmetry=5.42%
+5. Surah 81 → Surah 62: similarity=80.48%, asymmetry=-5.30%
+6. Surah 62 → Surah 81: similarity=85.79%, asymmetry=5.30%
+7. Surah 90 → Surah 62: similarity=74.05%, asymmetry=-5.26%
+8. Surah 62 → Surah 90: similarity=79.31%, asymmetry=5.26%
+9. Surah 74 → Surah 66: similarity=88.05%, asymmetry=-4.98%
+10. Surah 66 → Surah 74: similarity=93.03%, asymmetry=4.98%

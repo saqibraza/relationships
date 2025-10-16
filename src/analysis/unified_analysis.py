@@ -9,6 +9,7 @@ This script combines all analysis methods into a single unified relationship mat
 3. Trigram similarity (3-word phrases)
 4. Sentence Embeddings (multilingual transformers)
 5. AraBERT (Arabic-specific contextual embeddings)
+6. Asymmetric STS (verse-level semantic coverage with AraBERT)
 
 The unified matrix is a weighted combination of all methods, normalized to 0-100%.
 """
@@ -19,6 +20,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from src.analysis.normalized_analysis import NormalizedQuranAnalyzer
 from src.analysis.advanced_analysis import AdvancedQuranAnalyzer
+from src.analysis.asymmetric_sts import AsymmetricSTSAnalyzer
 import logging
 import os
 import json
@@ -38,33 +40,36 @@ class UnifiedQuranAnalyzer:
         
         Args:
             weights: Dict with keys: 'kl_divergence', 'bigram', 'trigram', 
-                    'embeddings', 'arabert'. Values should sum to 1.0.
+                    'embeddings', 'arabert', 'asymmetric_sts'. Values should sum to 1.0.
                     If None, uses weights based on unified_type.
-            unified_type: 'all' (all 5 methods) or 'semantic' (embeddings+arabert only)
+            unified_type: 'all' (all 6 methods) or 'semantic' (embeddings+arabert+asym_sts only)
         """
         self.normalized_analyzer = NormalizedQuranAnalyzer()
         self.advanced_analyzer = AdvancedQuranAnalyzer()
+        self.asymmetric_sts_analyzer = AsymmetricSTSAnalyzer(model_type='arabert')
         self.unified_type = unified_type
         
         # Default weights based on type
         if weights is None:
             if unified_type == 'semantic':
-                # Semantic only: embeddings + arabert
+                # Semantic only: embeddings + arabert + asymmetric_sts
                 self.weights = {
                     'kl_divergence': 0.0,
                     'bigram': 0.0,
                     'trigram': 0.0,
-                    'embeddings': 0.70,   # 70% - multilingual semantics
-                    'arabert': 0.30       # 30% - Arabic-specific
+                    'embeddings': 0.45,      # 45% - multilingual semantics
+                    'arabert': 0.25,         # 25% - Arabic-specific contextual
+                    'asymmetric_sts': 0.30   # 30% - verse-level coverage (AraBERT)
                 }
             else:  # 'all'
-                # All methods
+                # All methods (6 total)
                 self.weights = {
-                    'kl_divergence': 0.30,  # 30% - statistical foundation
-                    'bigram': 0.10,          # 10% - phrase patterns
-                    'trigram': 0.10,         # 10% - longer phrases
-                    'embeddings': 0.35,      # 35% - deep semantics
-                    'arabert': 0.15          # 15% - Arabic-specific
+                    'kl_divergence': 0.25,   # 25% - statistical foundation
+                    'bigram': 0.08,          # 8% - phrase patterns
+                    'trigram': 0.07,         # 7% - longer phrases
+                    'embeddings': 0.25,      # 25% - deep semantics
+                    'arabert': 0.15,         # 15% - Arabic-specific
+                    'asymmetric_sts': 0.20   # 20% - verse-level (AraBERT)
                 }
         else:
             self.weights = weights
@@ -80,11 +85,12 @@ class UnifiedQuranAnalyzer:
         self.surah_names = [f"Surah {i}" for i in range(1, 115)]
     
     def load_data(self):
-        """Load Quran data for both analyzers."""
+        """Load Quran data for all analyzers."""
         logger.info("Loading Quran data...")
         self.normalized_analyzer.extract_quran_data()
         self.advanced_analyzer.load_quran_data()
-        logger.info("✓ Data loaded")
+        self.asymmetric_sts_analyzer.load_data()
+        logger.info("✓ Data loaded for all analyzers")
     
     def compute_all_matrices(self):
         """Compute all similarity matrices using different methods."""
@@ -161,7 +167,36 @@ class UnifiedQuranAnalyzer:
             self.weights['embeddings'] += self.weights['arabert']
             self.weights['arabert'] = 0.0
         
-        logger.info("\n✓ All matrices computed successfully")
+        # 6. Asymmetric STS (verse-level with AraBERT)
+        logger.info("\n6. Computing Asymmetric STS similarity...")
+        asymsts_cache = "results/matrices/asymmetric_sts_arabert_similarity_matrix.csv"
+        if os.path.exists(asymsts_cache):
+            logger.info(f"   Loading from cache: {asymsts_cache}")
+            df = pd.read_csv(asymsts_cache, index_col=0)
+            asymsts_matrix = df.values
+        else:
+            logger.info("   Computing Asym-STS (this may take 30-45 minutes)...")
+            try:
+                self.asymmetric_sts_analyzer.load_model()
+                asymsts_matrix = self.asymmetric_sts_analyzer.compute_asymmetric_sts_matrix()
+                logger.info(f"   Saving to cache: {asymsts_cache}")
+                # Save for future use
+                os.makedirs("results/matrices", exist_ok=True)
+                df = pd.DataFrame(asymsts_matrix, 
+                                index=[f"Surah {i}" for i in range(1, 115)],
+                                columns=[f"Surah {i}" for i in range(1, 115)])
+                df.to_csv(asymsts_cache)
+            except Exception as e:
+                logger.warning(f"   ⚠ Asym-STS computation failed: {e}")
+                logger.warning(f"   Using AraBERT as fallback for Asym-STS")
+                asymsts_matrix = arabert_matrix_pct
+                self.weights['arabert'] += self.weights['asymmetric_sts']
+                self.weights['asymmetric_sts'] = 0.0
+        
+        self.matrices['asymmetric_sts'] = asymsts_matrix
+        logger.info(f"   ✓ Asym-STS: mean={np.mean(asymsts_matrix):.2f}%")
+        
+        logger.info("\n✓ All 6 matrices computed successfully")
         return self.matrices
     
     def compute_unified_matrix(self):

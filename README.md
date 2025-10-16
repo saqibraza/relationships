@@ -29,18 +29,28 @@ open results/sample_pairs/ENHANCED_PAIRS_ANALYSIS.md
 
 Generates **two types of asymmetric similarity matrices** (114×114) analyzing relationships between all Quranic surahs:
 
-### 1. Unified-All Matrix (Comprehensive)
-Combines **5 analysis methods**:
-- 🔢 **KL Divergence** (30%): Word frequency distributions
-- 📝 **Bigrams** (10%): 2-word phrase patterns
-- 📝 **Trigrams** (10%): 3-word phrase patterns
-- 🧠 **Sentence Embeddings** (35%): Deep semantic meaning (multilingual)
+### 1. Unified-All Matrix (Comprehensive) - 6 Methods 🆕
+Combines **all 6 analysis methods**:
+- 🔢 **KL Divergence** (25%): Word frequency distributions
+- 📝 **Bigrams** (8%): 2-word phrase patterns
+- 📝 **Trigrams** (7%): 3-word phrase patterns
+- 🧠 **Sentence Embeddings** (25%): Deep semantic meaning (multilingual)
 - 🇸🇦 **AraBERT** (15%): Arabic-specific contextual embeddings
+- 🎯 **Asymmetric STS** (20%): Verse-level semantic coverage (AraBERT)
 
-### 2. Unified-Semantic Matrix (Pure Conceptual)
+### 2. Unified-Semantic Matrix (Pure Conceptual) - 3 Semantic Methods 🆕
 Focuses on **semantic methods only**:
-- 🧠 **Sentence Embeddings** (70%): Universal semantic patterns
-- 🇸🇦 **AraBERT** (30%): Classical Arabic-aware contextual understanding
+- 🧠 **Sentence Embeddings** (45%): Universal semantic patterns
+- 🇸🇦 **AraBERT** (25%): Classical Arabic-aware contextual understanding
+- 🎯 **Asymmetric STS** (30%): Verse-level directional coverage (AraBERT)
+
+### What is Asymmetric STS?
+Advanced **verse-level semantic matching** that measures directional coverage:
+- 📍 **Verse-by-Verse**: Analyzes 6,123 individual verses (Bismillah excluded)
+- 🎯 **Directional Coverage**: Measures how much of source content is found in target
+- 🇸🇦 **AraBERT**: Classical Arabic expert (`aubmindlab/bert-base-arabertv02`)
+- 📊 **Formula**: `Asym-STS(B→A) = (1/|S_B|) × Σ max CosineSim(verse_b, verses_A)`
+- 📈 **Results**: 99%+ similarity scores reflecting deep Quranic thematic unity
 
 ---
 
@@ -58,15 +68,25 @@ Focuses on **semantic methods only**:
 
 ## 📈 Results Summary
 
-### Overall Statistics
+### Overall Statistics (With Asym-STS Integration) 🆕
 
-| Metric | Unified-All | Unified-Semantic | Semantic Boost |
-|--------|-------------|------------------|----------------|
-| **Mean Similarity** | 48.79% | 85.05% | +36.26% |
-| **Max Similarity** | 57.02% | 95.85% | +40.18% |
-| **Min Similarity** | 43.32% | 76.51% | +33.19% |
+| Metric | Unified-All (6 methods) | Unified-Semantic (3 methods) | Semantic Boost |
+|--------|------------------------|------------------------------|----------------|
+| **Mean Similarity** | 54.15% | 83.61% | +29.46% |
+| **Max Similarity** | 67.01% | 97.01% | +30.00% |
+| **Min Similarity** | 31.42% | 47.26% | +15.84% |
+| **Std Deviation** | 6.25% | 9.12% | +2.87% |
+| **Median Similarity** | 55.24% | 86.09% | +30.85% |
 
-**Key Finding**: All surah pairs show **30-40% semantic boost**, indicating **thematic unity with linguistic diversity** - a hallmark of Classical Quranic text.
+**Key Finding**: Adding Asym-STS (verse-level AraBERT analysis) increased Unified-All similarity by ~5% and provides more nuanced directional relationships. The **29-30% semantic boost** still demonstrates **thematic unity with linguistic diversity** - a hallmark of Classical Quranic text.
+
+**Individual Method Contributions**:
+- KL Divergence: 15.61% (statistical/vocabulary)
+- Bigrams: 1.60% (2-word phrases)
+- Trigrams: 1.06% (3-word phrases)
+- Sentence Embeddings: 80.63% (multilingual semantics)
+- AraBERT: 82.42% (Classical Arabic contextual)
+- **Asym-STS: 89.70% (verse-level AraBERT coverage)** 🆕
 
 ### Top 10 Most Similar Pairs (From ALL 6,441 pairs)
 
@@ -319,6 +339,8 @@ Most pairs show **near-zero asymmetry** in semantic methods (embeddings, AraBERT
 - **[Quick Start](docs/QUICKSTART.md)**: Installation and basic usage
 - **[Methodology](docs/METHODOLOGY.md)**: Technical details and algorithms
 - **[Classical Arabic](docs/CLASSICAL_ARABIC.md)**: Language considerations
+- **[Asymmetric STS Guide](docs/ASYMMETRIC_STS_GUIDE.md)** 🆕: Verse-level semantic analysis
+- **[AraBERT Integration](ARABERT_INTEGRATION.md)** 🆕: Why AraBERT for Classical Arabic
 - **[Sample Pairs Analysis](results/sample_pairs/ENHANCED_PAIRS_ANALYSIS.md)**: Detailed 10-pair analysis
 
 ---

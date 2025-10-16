@@ -1,0 +1,20 @@
+{
+  "method": "Asymmetric Semantic Textual Similarity (Asym-STS)",
+  "model": "paraphrase-multilingual-mpnet-base-v2",
+  "n_surahs": 114,
+  "total_pairs": 12996,
+  "similarity_stats": {
+    "min": 64.8343276977539,
+    "max": 100.0,
+    "mean": 89.7027333342651,
+    "median": 90.57723617553711,
+    "std": 5.008168875426646
+  },
+  "asymmetry_stats": {
+    "min": 0.0,
+    "max": 18.54291534423828,
+    "mean": 3.559864200346651,
+    "median": 2.6827659606933594,
+    "std": 3.106456343474514
+  }
+}
