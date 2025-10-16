@@ -10,12 +10,13 @@ This project analyzes the entire corpus of the Quran (114 surahs) to determine s
 | **Total Surahs** | 114 (Complete) |
 | **Total Words** | 82,011 |
 | **Matrix Size** | 114×114 (Asymmetric) |
-| **Mean Similarity** | 14.93% (0-100% scale) |
-| **Similarity Range** | 5.93% - 40.26% |
-| **Analysis Methods** | KL Divergence, N-grams, Sentence Embeddings |
+| **Unified-All Similarity** | 45.07% (range: 20.60% - 59.47%) |
+| **Unified-Semantic Similarity** | 81.00% (range: 35.34% - 97.49%) |
+| **Analysis Methods** | 5 individual + 2 unified types |
+| **Decimal Precision** | All CSVs formatted to 2 decimals |
 | **Status** | ✅ Verified & Production Ready |
 
-**Quick Start**: `python3 quran_extractor.py && python3 normalized_analysis.py`
+**Quick Start**: `python3 run_complete_analysis.py`
 
 ## ✅ Data Source Verified
 
@@ -93,24 +94,30 @@ python3 quran_extractor.py
 # This creates: data/quran_surahs.json (cached for future use)
 ```
 
-### 2. Run Basic Analysis
+### 2. Run Complete Analysis (Recommended)
 
 ```bash
-# Run KL divergence analysis with normalized similarity scores
-python3 normalized_analysis.py
+# Run complete analysis with both unified types
+python3 run_complete_analysis.py
 
-# Results saved to 'normalized_results/' directory
-# Creates: similarity matrix (0-100%), visualizations, statistics
+# This runs:
+#   - Unified-All (all 5 methods combined)
+#   - Unified-Semantic (embeddings + AraBERT only)
+#   - Sample pairs detailed analysis
+#   - Formats all matrices to 2 decimal places
 ```
 
-### 3. Run Advanced Analysis (N-grams + Embeddings)
+### 3. Or Run Individual Analyses
 
 ```bash
-# Run comprehensive multi-method analysis
+# Basic KL divergence analysis
+python3 normalized_analysis.py
+
+# Advanced N-grams + Embeddings
 python3 advanced_analysis.py
 
-# Includes: bigrams, trigrams, sentence embeddings, AraBERT
-# Results saved to 'advanced_results/' directory
+# Unified analysis (customizable)
+python3 unified_analysis.py
 ```
 
 ### 4. Verify Extraction (Optional)

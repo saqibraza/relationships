@@ -32,37 +32,51 @@ class UnifiedQuranAnalyzer:
     Combines all analysis methods into a unified relationship matrix.
     """
     
-    def __init__(self, weights=None):
+    def __init__(self, weights=None, unified_type='all'):
         """
         Initialize with optional custom weights for each method.
         
         Args:
             weights: Dict with keys: 'kl_divergence', 'bigram', 'trigram', 
                     'embeddings', 'arabert'. Values should sum to 1.0.
-                    If None, uses equal weights.
+                    If None, uses weights based on unified_type.
+            unified_type: 'all' (all 5 methods) or 'semantic' (embeddings+arabert only)
         """
         self.normalized_analyzer = NormalizedQuranAnalyzer()
         self.advanced_analyzer = AdvancedQuranAnalyzer()
+        self.unified_type = unified_type
         
-        # Default equal weights
+        # Default weights based on type
         if weights is None:
-            self.weights = {
-                'kl_divergence': 0.30,  # 30% - statistical foundation
-                'bigram': 0.10,          # 10% - phrase patterns
-                'trigram': 0.10,         # 10% - longer phrases
-                'embeddings': 0.30,      # 30% - deep semantics
-                'arabert': 0.20          # 20% - Arabic-specific
-            }
+            if unified_type == 'semantic':
+                # Semantic only: embeddings + arabert
+                self.weights = {
+                    'kl_divergence': 0.0,
+                    'bigram': 0.0,
+                    'trigram': 0.0,
+                    'embeddings': 0.70,   # 70% - multilingual semantics
+                    'arabert': 0.30       # 30% - Arabic-specific
+                }
+            else:  # 'all'
+                # All methods
+                self.weights = {
+                    'kl_divergence': 0.30,  # 30% - statistical foundation
+                    'bigram': 0.10,          # 10% - phrase patterns
+                    'trigram': 0.10,         # 10% - longer phrases
+                    'embeddings': 0.35,      # 35% - deep semantics
+                    'arabert': 0.15          # 15% - Arabic-specific
+                }
         else:
             self.weights = weights
             # Normalize weights to sum to 1.0
             total = sum(self.weights.values())
             self.weights = {k: v/total for k, v in self.weights.items()}
         
-        logger.info(f"Initialized with weights: {self.weights}")
+        logger.info(f"Initialized with unified_type='{unified_type}', weights: {self.weights}")
         
         self.matrices = {}
         self.unified_matrix = None
+        self.unified_semantic_matrix = None
         self.surah_names = [f"Surah {i}" for i in range(1, 115)]
     
     def load_data(self):

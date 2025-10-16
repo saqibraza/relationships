@@ -1,0 +1,13 @@
+UNIFIED ANALYSIS - ALL METHODS (KL + N-grams + Embeddings + AraBERT)
+======================================================================
+
+Weights:
+  • Kl Divergence: 30.0%
+  • Bigram: 10.0%
+  • Trigram: 10.0%
+  • Embeddings: 35.0%
+  • Arabert: 15.0%
+
+Statistics:
+  Mean: 45.07%
+  Range: 20.60% - 59.47%
