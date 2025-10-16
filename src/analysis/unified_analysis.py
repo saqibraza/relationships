@@ -17,8 +17,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from normalized_analysis import NormalizedQuranAnalyzer
-from advanced_analysis import AdvancedQuranAnalyzer
+from src.analysis.normalized_analysis import NormalizedQuranAnalyzer
+from src.analysis.advanced_analysis import AdvancedQuranAnalyzer
 import logging
 import os
 import json

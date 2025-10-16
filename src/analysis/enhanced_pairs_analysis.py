@@ -12,7 +12,7 @@ Analyzes 10 specific surah pairs with:
 
 import pandas as pd
 import numpy as np
-from sample_pairs_analysis import format_matrix_to_2_decimals
+from src.analysis.sample_pairs_analysis import format_matrix_to_2_decimals
 
 # Extended sample pairs
 SAMPLE_PAIRS = [

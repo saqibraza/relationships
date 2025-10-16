@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from simple_analysis import SimpleQuranAnalyzer
+from src.analysis.simple_analysis import SimpleQuranAnalyzer
 import logging
 import os
 

@@ -20,9 +20,10 @@ import os
 
 # Add src to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../src/analysis'))
 
-from unified_analysis import UnifiedQuranAnalyzer
-from enhanced_pairs_analysis import generate_enhanced_analysis, format_matrix_to_2_decimals
+from src.analysis.unified_analysis import UnifiedQuranAnalyzer
+from src.analysis.enhanced_pairs_analysis import generate_enhanced_analysis, format_matrix_to_2_decimals
 import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

@@ -1,9 +1,9 @@
 {
     "weights": {
-        "kl_divergence": 0.0,
+        "kl_divergence": 0.7,
         "bigram": 0.0,
         "trigram": 0.0,
-        "embeddings": 0.7,
+        "embeddings": 0.0,
         "arabert": 0.3
     },
     "methods_used": [
@@ -14,10 +14,10 @@
         "arabert"
     ],
     "statistics": {
-        "mean_similarity": 81.00335784234943,
-        "std_similarity": 11.401285398079516,
-        "min_similarity": 35.336788430809975,
-        "max_similarity": 97.49397468566895,
-        "median_similarity": 84.29155731201172
+        "mean_similarity": 35.131659692472724,
+        "std_similarity": 7.701909388877084,
+        "min_similarity": 5.512179992247215,
+        "max_similarity": 57.23131718126945,
+        "median_similarity": 35.68448834948254
     }
 }
