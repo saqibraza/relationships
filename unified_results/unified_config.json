@@ -1,0 +1,23 @@
+{
+    "weights": {
+        "kl_divergence": 0.3,
+        "bigram": 0.1,
+        "trigram": 0.1,
+        "embeddings": 0.35,
+        "arabert": 0.15
+    },
+    "methods_used": [
+        "kl_divergence",
+        "bigram",
+        "trigram",
+        "embeddings",
+        "arabert"
+    ],
+    "statistics": {
+        "mean_similarity": 45.072744007234974,
+        "std_similarity": 6.748199742316174,
+        "min_similarity": 20.597473205144333,
+        "max_similarity": 59.46528425453016,
+        "median_similarity": 46.376137578768635
+    }
+}

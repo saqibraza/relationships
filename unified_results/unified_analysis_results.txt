@@ -1,0 +1,61 @@
+UNIFIED MULTI-METHOD QURAN SEMANTIC ANALYSIS
+======================================================================
+
+Methods Combined:
+----------------------------------------------------------------------
+  • Kl Divergence: 30.0%
+  • Bigram: 10.0%
+  • Trigram: 10.0%
+  • Embeddings: 35.0%
+  • Arabert: 15.0%
+
+
+Statistics:
+----------------------------------------------------------------------
+Mean Similarity: 45.07%
+Std Deviation: 6.75%
+Min Similarity: 20.60%
+Max Similarity: 59.47%
+Median Similarity: 46.38%
+
+
+Top 10 Most Similar Pairs:
+----------------------------------------------------------------------
+1. Surah 7 ↔ Surah 10: 59.47%
+2. Surah 3 ↔ Surah 57: 59.04%
+3. Surah 3 ↔ Surah 5: 58.95%
+4. Surah 3 ↔ Surah 61: 58.89%
+5. Surah 3 ↔ Surah 8: 58.80%
+6. Surah 5 ↔ Surah 61: 58.65%
+7. Surah 3 ↔ Surah 42: 58.48%
+8. Surah 57 ↔ Surah 64: 58.28%
+9. Surah 3 ↔ Surah 45: 58.25%
+10. Surah 5 ↔ Surah 3: 58.25%
+
+
+Top 10 Most Different Pairs:
+----------------------------------------------------------------------
+1. Surah 92 ↔ Surah 114: 20.60%
+2. Surah 114 ↔ Surah 92: 21.33%
+3. Surah 92 ↔ Surah 105: 21.51%
+4. Surah 105 ↔ Surah 92: 22.18%
+5. Surah 92 ↔ Surah 108: 22.94%
+6. Surah 92 ↔ Surah 99: 23.37%
+7. Surah 92 ↔ Surah 102: 23.51%
+8. Surah 99 ↔ Surah 92: 23.94%
+9. Surah 108 ↔ Surah 92: 24.14%
+10. Surah 102 ↔ Surah 92: 24.18%
+
+
+Top 10 Most Asymmetric Relationships:
+----------------------------------------------------------------------
+1. Surah 62 → Surah 2: similarity=48.21%, asymmetry=-6.07%
+2. Surah 2 → Surah 62: similarity=54.28%, asymmetry=6.07%
+3. Surah 62 → Surah 3: similarity=51.99%, asymmetry=-6.05%
+4. Surah 3 → Surah 62: similarity=58.03%, asymmetry=6.05%
+5. Surah 109 → Surah 10: similarity=41.17%, asymmetry=-5.67%
+6. Surah 10 → Surah 109: similarity=46.84%, asymmetry=5.67%
+7. Surah 61 → Surah 5: similarity=53.24%, asymmetry=-5.41%
+8. Surah 5 → Surah 61: similarity=58.65%, asymmetry=5.41%
+9. Surah 98 → Surah 4: similarity=50.20%, asymmetry=-5.38%
+10. Surah 4 → Surah 98: similarity=55.57%, asymmetry=5.38%
