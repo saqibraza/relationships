@@ -68,15 +68,37 @@ Focuses on **semantic methods only**:
 
 **Key Finding**: All surah pairs show **30-40% semantic boost**, indicating **thematic unity with linguistic diversity** - a hallmark of Classical Quranic text.
 
-### Top 5 Most Similar Pairs (Unified-Semantic)
+### Top 10 Most Similar Pairs (From ALL 6,441 pairs)
 
 | Rank | Pair | Surahs | Similarity | Reason |
 |------|------|--------|------------|--------|
-| 🥇 | 10×11 | Yunus & Hud | **95.85%** | Parallel prophetic narratives |
-| 🥈 | 24×33 | An-Nur & Al-Ahzab | **94.01%** | Complementary social guidance |
-| 🥉 | 2×3 | Al-Baqarah & Āl 'Imrān | **87.95%** | Sequential Medinan legislation |
-| 4 | 69×101 | Al-Haqqah & Al-Qari'ah | **85.97%** | Eschatological descriptions |
-| 5 | 93×94 | Ad-Duha & Ash-Sharh | **83.18%** | Consolation to the Prophet |
+| 🥇 | 16×33 | An-Nahl & Al-Ahzab | **97.49%** | Medinan surahs with legislative/social guidance, Allah's blessings, community conduct |
+| 🥈 | 33×58 | Al-Ahzab & Al-Mujadilah | **97.49%** | Consecutive Medinan surahs on community issues, women's rights, social conduct |
+| 🥉 | 16×68 | An-Nahl & Al-Qalam | **97.36%** | Allah's blessings, patience amid opposition, gratitude, enumerating divine gifts |
+| 4 | 11×16 | Hud & An-Nahl | **97.36%** | Prophetic narratives align with blessings - patience, gratitude, historical warnings |
+| 5 | 35×42 | Fatir & Ash-Shura | **97.23%** | Makkan surahs on Allah's creative power, divine attributes, resurrection |
+| 6 | 13×16 | Ar-Ra'd & An-Nahl | **97.20%** | Thunder & Bees - signs of Allah in nature, gratitude, guidance |
+| 7 | 11×33 | Hud & Al-Ahzab | **97.20%** | Prophetic narratives and community guidance - trials, patience, divine support |
+| 8 | 32×45 | As-Sajdah & Al-Jathiyah | **97.11%** | Makkan surahs on prostration, submission, Judgment Day, belief consequences |
+| 9 | 11×68 | Hud & Al-Qalam | **97.10%** | Prophetic steadfastness parallels Prophet's character and patience |
+| 10 | 11×40 | Hud & Ghafir | **97.03%** | Prophetic narratives align with messengers, rejection, divine justice |
+
+### Top 10 Least Similar Pairs (Most Different)
+
+| Rank | Pair | Surahs | Similarity | Reason |
+|------|------|--------|------------|--------|
+| 1 | 92×114 | Al-Layl & An-Nas | **35.34%** | Oath surah about effort vs protection prayer - minimal thematic connection |
+| 2 | 92×105 | Al-Layl & Al-Fil | **37.72%** | General moral teaching vs specific historical event - genre mismatch |
+| 3 | 92×99 | Al-Layl & Az-Zalzalah | **40.85%** | Human deeds theme vs apocalyptic events - different narrative styles |
+| 4 | 92×108 | Al-Layl & Al-Kawthar | **41.01%** | Extended oath surah vs shortest surah - length and content differ |
+| 5 | 92×102 | Al-Layl & At-Takathur | **41.83%** | Righteousness vs materialism - different focus areas |
+| 6 | 89×114 | Al-Fajr & An-Nas | **44.41%** | Complex oath surah vs simple protection prayer - structural divergence |
+| 7 | 89×108 | Al-Fajr & Al-Kawthar | **45.34%** | Historical narrative/oath vs short blessing - different genres |
+| 8 | 92×111 | Al-Layl & Al-Masad | **45.49%** | Charity/effort vs specific condemnation - very different purposes |
+| 9 | 92×95 | Al-Layl & At-Tin | **45.85%** | Human effort vs human creation - minimal thematic overlap |
+| 10 | 89×103 | Al-Fajr & Al-Asr | **45.87%** | Dawn/oath vs very short ethical surah - different lengths and focus |
+
+**Note**: These rankings are from the complete Unified-Semantic matrix analyzing all 6,441 possible pairs among 114 surahs. The analysis reveals that Surah 16 (An-Nahl), Surah 11 (Hud), and Surah 33 (Al-Ahzab) appear most frequently in high-similarity pairs, while Surah 92 (Al-Layl) appears most frequently in low-similarity pairs due to its unique oath structure.
 
 ---
 
